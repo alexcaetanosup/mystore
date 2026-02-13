@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyStore | Premium E-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-controls">
+      <div class="container header-flex">
+        <h1 class="logo">My<span>Store</span></h1>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+          />
+          <button id="searchBtn" class="btn-search">Search</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="imageModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="imgZoomed" />
+    </div>
+
+    <aside id="productDrawer" class="drawer">
+      <button id="closeDrawerBtn" class="close-btn">&times;</button>
+      <h2>New Product</h2>
+      <div class="form-group">
+        <input type="text" id="formTitle" placeholder="Product Title" />
+        <input
+          type="number"
+          id="formPrice"
+          placeholder="Price (e.g. 1500.00)"
+        />
+        <textarea id="formDesc" placeholder="Short description..."></textarea>
+        <input type="text" id="formImg" placeholder="Image URL" />
+        <button id="saveProductBtn" class="btn-success">Save to Store</button>
+      </div>
+    </aside>
+
+    <main class="main-layout container">
+      <section class="vitrine">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="cart-sidebar">
+          <h2 class="cart-title">🛒 Your Cart</h2>
+          <div id="cartList">
+            <p class="empty-msg">Your cart is empty.</p>
+          </div>
+          <div class="total-row">
+            <span>Total:</span>
+            <span class="total-price">$ <span id="totalCart">0.00</span></span>
+          </div>
+        </div>
+        <button id="openFormBtn" class="btn-add-sidebar">
+          ＋ Add New Product
+        </button>
+      </aside>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3 class="logo">My<span>Store</span></h3>
+          <p>Quality and trust in every detail.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <p>About Us</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>support@mystore.com</p>
+          <div class="social">📸 🐦 🌐</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MyStore - All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
